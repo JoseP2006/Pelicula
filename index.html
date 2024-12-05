@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Películas y Series</title>
+    <style>
+        /* General */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212; /* Negro intenso */
+            color: #f4f4f4; /* Gris claro */
+        }
+
+        a {
+            text-decoration: none;
+            color: #ff4d4d; /* Rojo vibrante */
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            background-color: #ff4d4d; /* Rojo vibrante */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            font-size: 1rem;
+        }
+
+        /* Main */
+        main {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .grid-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #1e1e1e; /* Gris oscuro */
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            text-align: center;
+            padding: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(255, 77, 77, 0.6); /* Rojo suave */
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            color: #ff4d4d; /* Rojo vibrante */
+            margin: 10px 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #ff4d4d; /* Rojo vibrante */
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Portal de Películas y Series</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#peliculas">Películas</a></li>
+                <li><a href="#series">Series</a></li>
+                <li><a href="#contacto">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <!-- Sección de Inicio -->
+        <section id="inicio" class="content">
+            <h2>Bienvenido a nuestro portal</h2>
+            <p>Explora las mejores películas y series del momento.</p>
+        </section>
+
+        <!-- Sección de Películas -->
+        <section id="peliculas" class="content">
+            <h2>Películas</h2>
+            <div class="grid-section">
+                <div class="card">
+                    <img src="https://miro.medium.com/v2/resize:fit:500/1*FAf88WN1M-XhWgN3b9pFFQ.jpeg" alt="Avatar">
+                    <h3>Avatar</h3>
+                </div>
+                <div class="card">
+                    <img src="https://i.scdn.co/image/ab67616d0000b273a883e26f90ab617c91b90e56" alt="Inception">
+                    <h3>Inception</h3>
+                </div>
+                <div class="card">
+                    <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2016/07/titanic.jpg?tf=3840x" alt="Titanic">
+                    <h3>Titanic</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Series -->
+        <section id="series" class="content">
+            <h2>Series</h2>
+            <div class="grid-section">
+                <div class="card">
+                    <img src="https://occ-0-8407-2433.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABS6v2gvwesuRN6c28ZykPq_fpmnQCJwELBU-kAmEcuC9HhWX-DfuDbtA-bfo-IrfgNtxl0qwJJlhI6DENsGFXknKkjhxPGTV-qhp.jpg?r=608" alt="Stranger Things">
+                    <h3>Stranger Things</h3>
+                </div>
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDykVT4-k1UIVSBBeE87YZFd33GjlvdOXyuQ&s" alt="Breaking Bad">
+                    <h3>Breaking Bad</h3>
+                </div>
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT59luKIIdI17uKygRpnmFaJz944eoVqN6v2A&s" alt="The Crown">
+                    <h3>The Crown</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contáctanos -->
+        <section id="contacto" class="content">
+            <h2>Contáctanos</h2>
+            <p>Para más información, escríbenos a: <strong>contacto@peliculas.com</strong></p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Portal de Películas y Series. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
